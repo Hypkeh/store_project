@@ -1,0 +1,12 @@
+{% block content %}
+    <h1>Product Detail</h1>
+    <p>{{ product.name }}</p>
+    <p>{{ product.date_of_manufacture }}</p>
+    <p>{{ product.expires }}</p>
+    <p>{{ product.quantity }}</p>
+    <img src="{{product.image.url}}">
+    <p>---------</p>
+    <div style="height: 5%; width: 15%;border: 2px solid; background-color: chocolate; display: flex; justify-content: center;"><a class="nav-link" ></a><a class="nav-link" href="{% url 'order_create' %}"><b>Добавить в корзину</b></a></div><br>
+    <div style="height: 5%; width: 15%;border: 2px solid; background-color: chocolate; display: flex; justify-content: center;"><a class="nav-link" href="{% url 'main_page' %}"><strong>Ha главную</strong></a></div>
+
+{% endblock %}
